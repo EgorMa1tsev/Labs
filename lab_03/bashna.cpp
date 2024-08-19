@@ -29,4 +29,5 @@ int main() {
     for (std::string act : actions) {
         std::cout << act << "\n";
     }
+    actions.clear();
 }

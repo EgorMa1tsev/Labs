@@ -20,12 +20,12 @@ int main() {
         
         int n = std::stoi(str);
         int x = 2;
-        auto start = std::chrono::steady_clock::now();
+        auto start = std::chrono::high_resolution_clock::now();
         for (int i = 0; i != n; ++i) {
             x =  Calculate(x);
         }
-        auto finish = std::chrono::steady_clock::now();
-        auto t = std::chrono::duration_cast<std::chrono::milliseconds>(finish - start);
-        std::cout << t.count() << "\n";
+        auto end = std::chrono::high_resolution_clock::now();
+        auto diff = end - start;
+        std::cout << std::chrono::duration<double, std::chrono::seconds::period>(diff).count() << " s\n";
     }
 }

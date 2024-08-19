@@ -31,7 +31,7 @@ int main() {
 
     auto start = std::chrono::high_resolution_clock::now();
     for (int i = 0; i != n1; ++i) {
-        x1 = Full(x1);
+        Full(x1);
     } 
     auto end = std::chrono::high_resolution_clock::now();
     auto diff = end - start;
@@ -40,7 +40,7 @@ int main() {
 
     auto start2 = std::chrono::high_resolution_clock::now();
     for (int i = 0; i != n2; ++i) {
-        x2 = Full(x2);
+        Full(x2);
     } 
     auto end2 = std::chrono::high_resolution_clock::now();
     auto diff2 = end2 - start2;
